@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\App.xaml</FilePath>
+      <Hash>FD-6C-83-9C-AE-DF-05-E8-76-0E-95-AA-9F-3C-C2-EA</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\AddScanPage.xaml</FilePath>
+      <Hash>51-15-43-3E-8A-9A-A1-D5-77-AB-E8-C2-CD-85-22-30</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\EditScanPage.xaml</FilePath>
+      <Hash>2A-2F-DB-8D-B7-F2-D5-37-04-3F-58-A6-80-21-FC-0D</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\LoginPage.xaml</FilePath>
+      <Hash>55-8E-5D-23-AF-44-84-B5-E6-17-31-58-CD-5B-F6-8D</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\MainPage.xaml</FilePath>
+      <Hash>9A-86-AD-24-C5-E2-D2-3A-E0-5C-9C-49-49-3C-98-FE</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\ScansPage.xaml</FilePath>
+      <Hash>5A-CD-60-77-5B-63-B4-0B-A6-FF-13-4C-08-2F-72-A5</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\AdrianKulbaka\source\repos\APIInventory\Inventory\Inventory\Views\SearchScanPage.xaml</FilePath>
+      <Hash>0A-C1-EB-40-7A-49-EC-84-60-82-F6-88-35-A4-7D-98</Hash>
+      <Properties />
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

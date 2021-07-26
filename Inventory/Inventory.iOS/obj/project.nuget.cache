@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "RnlNpZh+jyt3ggornMIMIv+Z2IlCHihwJXCSq5g7zakwoyDzq5z6xzHT90ZJPW5T0ZU2Q0KiBkgWQ72F+dcPDA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AdrianKulbaka\\source\\repos\\APIInventory.v2\\Inventory\\Inventory.iOS\\Inventory.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AdrianKulbaka\\.nuget\\packages\\xamarin.forms\\5.0.0.2083\\xamarin.forms.5.0.0.2083.nupkg.sha512"
+  ],
+  "logs": []
+}
