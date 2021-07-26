@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"  
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+             mc:Ignorable="d"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Inventory.ViewModels;assembly=Inventory"
+             x:Class="Inventory.Views.ScansPage">
+    
+    <ContentPage.BindingContext>
+        <vm:ScansViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Color x:Key="BorderColor">#666666</Color>
+            
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="CornerRadius" Value="3" />
+                <Setter Property="BorderColor" Value="{StaticResource BorderColor}" />
+            </Style>
+           
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid VerticalOptions="FillAndExpand"
+          Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Wybierz pociag"
+               Grid.Row="0"
+               Grid.Column="0"
+               FontSize="20"
+               TextColor="#666666"/>
+
+        <Label Text="Wybierz linie"
+               Grid.Row="0"
+               Grid.Column="1"
+               FontSize="20"
+               TextColor="#666666"/>
+
+        <Frame Style="{StaticResource FrameStyle}"
+               Grid.Row="1"
+               Grid.Column="1">
+            <Picker x:Name="Linepicker"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"
+                FontSize="70"
+                TextColor="#666666"
+                Title="_"
+                SelectedItem="SelectedLine"
+                SelectedIndexChanged="SetLineId">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Frame>
+
+        <Frame Style="{StaticResource FrameStyle}"
+               Grid.Row="1"
+               Grid.Column="0">
+            <Picker x:Name="Trainpicker"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"
+                FontSize="70"
+                Title="_"
+                SelectedItem="SelectedTrain"
+                SelectedIndexChanged="SetTrainId">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Frame>
+
+        <Button Text="Dodaj" 
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Clicked="AddScan_Clicked"
+                TextColor="White" 
+                Background="#666666"/>
+
+        <Button Command="{Binding GetScansCommand}" 
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Text="Wyswietl wszystkie" 
+                TextColor="White" 
+                Background="#666666"/>
+
+        <StackLayout
+            Grid.Row="4"
+            Grid.ColumnSpan="2">
+            <ListView ItemsSource="{Binding Scans}" 
+                  HasUnevenRows="True" 
+                  ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Code}"/>
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding Description}"/>
+                                <Label Text="{Binding TrainId}"/>
+                                <Label Text="{Binding LineId}"/>
+                                <!--<Label Text="{Binding UserId}"/>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:Inventory.ViewModels"
+             x:Class="Inventory.Views.AddScanPage">
+    <ContentPage.BindingContext>
+        <vm:AddScanViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="BorderColor">#666666</Color>
+
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="CornerRadius" Value="3" />
+                <Setter Property="BorderColor" Value="{StaticResource BorderColor}" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid VerticalOptions="FillAndExpand"
+          Margin="20,10,20,10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Button Text="Powrót" 
+                Grid.Row="0"
+                BackgroundColor="#666666"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+        
+        <Frame Style="{StaticResource FrameStyle}"
+               Grid.Row="1">
+            
+            <Entry x:Name="CodeEntry"
+               Text="{Binding Code}"
+               IsEnabled="False"/>
+            
+        </Frame>
+
+        <Frame Style="{StaticResource FrameStyle}"
+               Grid.Row="2">
+
+            <Entry x:Name="NameEntry"
+               Placeholder="Nazwa"
+               VerticalTextAlignment="Start"
+               HorizontalTextAlignment="Start"
+               Text="{Binding Name}"/>
+
+        </Frame>
+
+        <Frame Style="{StaticResource FrameStyle}"
+               Grid.Row="3">
+
+            <Entry x:Name="DescriptionEntry"
+               Placeholder="Opis"
+               VerticalTextAlignment="Start"
+               HorizontalTextAlignment="Start"
+               Text="{Binding Description}"/>
+
+        </Frame>
+
+        
+        
+        <Button Command="{Binding AddCommand}"
+                Grid.Row="4"
+                BackgroundColor="#666666"
+                TextColor="White"
+                Text="Dodaj"/>
+
+    </Grid>
+
+    
+</ContentPage>

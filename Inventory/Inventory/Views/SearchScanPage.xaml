@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Inventory.ViewModels"
+             x:Class="Inventory.Views.SearchScanPage">
+    <ContentPage.BindingContext>
+        <vm:SearchScanViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Button Text="Back"
+                Margin="10"
+                BackgroundColor="#666666"
+                TextColor="White"
+                HeightRequest="80"
+                Clicked="BackButton_Clicked"/>
+        
+        <Entry x:Name="SearchField"
+               Margin="10"
+               Text="{Binding Keyword}"
+               IsEnabled="False"/>
+        
+        <Button x:Name="SearchButton" 
+                Command="{Binding SearchScanCommand}"
+                BackgroundColor="#666666"
+                TextColor="White"
+                HeightRequest="80"
+                Text="Search scans"
+                IsVisible="False"/>
+
+        <ListView ItemsSource="{Binding Scans}" 
+                  HeightRequest="100"
+                  HasUnevenRows="True"
+                  ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Code}"/>
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Description}"/>
+                            <Label Text="{Binding TrainId}"/>
+                            <Label Text="{Binding LineId}"/>
+                            <!--<Label Text="{Binding UserId}"/>-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+    
+</ContentPage>

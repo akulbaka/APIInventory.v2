@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory.MainPage">
+
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!-- Place new controls here -->
+
+        <CollectionView ItemsSource="{Binding MySource}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                        Span="2" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" WidthRequest="120" HeightRequest="120">
+                        <Frame BackgroundColor="AliceBlue" WidthRequest="100" HeightRequest="100" HasShadow="True" CornerRadius="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+
+                            <Image Source=""  WidthRequest="100" HeightRequest="100"  />
+                        </Frame>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+
+    <!--<StackLayout>
+        <Picker x:Name="Trainpicker"
+                Title="Choose Train"
+                SelectedItem="SelectedTrain">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Picker x:Name="Linepicker"
+                Title="Choose Line"
+                SelectedItem="SelectedLine">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </StackLayout>-->
+
+</ContentPage>
