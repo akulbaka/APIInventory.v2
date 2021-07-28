@@ -80,7 +80,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AdrianKulbaka\source\repos\APIInventory.v2\Inventory\Inventory\bin\Debug\netstandard2.0\Inventory.dll">
       <PackagePath>Inventory.dll</PackagePath>
-      <Modified>2021-07-28T10:06:55.682</Modified>
+      <Modified>2021-07-28T11:20:27.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AdrianKulbaka\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>

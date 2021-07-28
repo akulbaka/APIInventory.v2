@@ -47,7 +47,7 @@ namespace Inventory.ViewModels
                     }
                     catch(Exception ex)
                     {
-                       await App.Current.MainPage.DisplayAlert("Bład", ex.ToString(), "Ok");
+                       await App.Current.MainPage.DisplayAlert("Bład", "Zły kod", "Ok");
                     }
                     
                 });
