@@ -39,5 +39,13 @@ namespace Inventory.Views
         {
             Settings.SetLineId = Linepicker.SelectedItem.ToString();
         }
+
+        private async void Logout_Clicked(object sender, EventArgs e)
+        {
+            Settings.Username = "";
+            Settings.Password = "";
+            Settings.AccessToken = "";
+            await Navigation.PopModalAsync();
+        }
     }
 }

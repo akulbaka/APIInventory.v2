@@ -26,6 +26,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+
     <Grid VerticalOptions="FillAndExpand"
           Margin="10">
 
@@ -36,26 +37,36 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="100" />
             <RowDefinition Height="80" />
             <RowDefinition Height="80" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Button Text="Wyloguj"
+                Grid.Row="0"
+                Grid.Column="1"
+                TextColor="White" 
+                Background="#666666"
+                WidthRequest="100"
+                HorizontalOptions="End"
+                Clicked="Logout_Clicked"/>
+
         <Label Text="Wybierz pociag"
-               Grid.Row="0"
+               Grid.Row="1"
                Grid.Column="0"
                FontSize="20"
                TextColor="#666666"/>
 
         <Label Text="Wybierz linie"
-               Grid.Row="0"
+               Grid.Row="1"
                Grid.Column="1"
                FontSize="20"
                TextColor="#666666"/>
 
         <Frame Style="{StaticResource FrameStyle}"
-               Grid.Row="1"
+               Grid.Row="2"
                Grid.Column="1">
             <Picker x:Name="Linepicker"
                 HorizontalTextAlignment="Center"
@@ -77,7 +88,7 @@
         </Frame>
 
         <Frame Style="{StaticResource FrameStyle}"
-               Grid.Row="1"
+               Grid.Row="2"
                Grid.Column="0">
             <Picker x:Name="Trainpicker"
                 HorizontalTextAlignment="Center"
@@ -98,21 +109,21 @@
         </Frame>
 
         <Button Text="Dodaj" 
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.ColumnSpan="2"
                 Clicked="AddScan_Clicked"
                 TextColor="White" 
                 Background="#666666"/>
 
         <Button Command="{Binding GetScansCommand}" 
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.ColumnSpan="2"
                 Text="Wyswietl wszystkie" 
                 TextColor="White" 
                 Background="#666666"/>
 
         <StackLayout
-            Grid.Row="4"
+            Grid.Row="5"
             Grid.ColumnSpan="2">
             <ListView ItemsSource="{Binding Scans}" 
                   HasUnevenRows="True" 
